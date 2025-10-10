@@ -1,0 +1,27 @@
+/.qodo
+/Business_Knowledge.xlsx
+/data.TXT
+/Dim_Date.txt
+/Dim_Date.xlsx
+/Dim_Discount.txt
+/Dim_Event.txt
+/Dim_Event.xlsx
+/Dim_Payment.csv
+/Dim_Product.csv
+/Dim_Product.txt
+/Dim_Product.xlsx
+/Dim_Table.csv
+/Dim_Time.txt
+/Fact_Sale.txt
+/Fact_Sale.xlsx
+/Fact_Sales.csv
+/find_change_price.ipynb
+/generate_product_history_report.ipynb
+/last_daily_orders_plot.png
+/main.ipynb
+/New Python File.py
+/price_history_amstel_pint.png
+/price_history_product_x.png
+/Products.txt
+/Raw_Sales.txt
+/time_of_last_discounted_order.png
