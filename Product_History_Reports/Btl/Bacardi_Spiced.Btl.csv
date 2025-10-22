@@ -1,4 +1,4 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-08-19 22:21:19,60.0,2021-08-19,True
-2023-11-25 20:44:25,65.0,2023-11-25,True
-2025-06-26 22:37:47,70.0,2025-06-26,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Bacardi Spiced.Btl,60.0,0,2021-08-19,2023-11-24,Btl
+Bacardi Spiced.Btl,65.0,0,2023-11-25,2025-06-25,Btl
+Bacardi Spiced.Btl,70.0,0,2025-06-26,2099-12-31,Btl

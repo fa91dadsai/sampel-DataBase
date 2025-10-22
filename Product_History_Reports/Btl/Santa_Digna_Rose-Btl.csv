@@ -1,3 +1,3 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-09-18 14:35:56,38.0,2021-09-18,True
-2022-09-22 21:09:07,40.0,2022-09-22,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Santa Digna Rose-Btl,38.0,0,2021-08-19,2022-09-21,Btl
+Santa Digna Rose-Btl,40.0,0,2022-09-22,2099-12-31,Btl

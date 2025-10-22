@@ -1,2 +1,2 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-12-13 21:11:51,11.0,2021-12-13,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Vdv Ice Brut 20 Cl-Btl,11.0,0,2021-08-19,2099-12-31,Btl

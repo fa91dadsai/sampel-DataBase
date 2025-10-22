@@ -1,5 +1,5 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-08-28 21:42:34,35.0,2021-08-28,True
-2024-02-06 21:46:56,37.0,2024-02-06,True
-2025-02-13 18:27:07,12.0,2025-02-13,True
-2025-02-16 21:18:45,37.0,2025-02-16,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Jp Chanet Ice-Btl,35.0,0,2021-08-19,2024-02-05,Btl
+Jp Chanet Ice-Btl,37.0,0,2024-02-06,2025-02-12,Btl
+Jp Chanet Ice-Btl,12.0,0,2025-02-13,2025-02-15,Btl
+Jp Chanet Ice-Btl,37.0,0,2025-02-16,2099-12-31,Btl

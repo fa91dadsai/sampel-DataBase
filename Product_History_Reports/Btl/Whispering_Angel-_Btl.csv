@@ -1,5 +1,5 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-09-11 21:14:46,45.0,2021-09-11,True
-2022-10-26 20:31:29,55.0,2022-10-26,True
-2023-06-13 18:13:40,60.0,2023-06-13,True
-2024-01-26 22:07:50,65.0,2024-01-26,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Whispering Angel- Btl,45.0,0,2021-08-19,2022-10-25,Btl
+Whispering Angel- Btl,55.0,0,2022-10-26,2023-06-12,Btl
+Whispering Angel- Btl,60.0,0,2023-06-13,2024-01-25,Btl
+Whispering Angel- Btl,65.0,0,2024-01-26,2099-12-31,Btl

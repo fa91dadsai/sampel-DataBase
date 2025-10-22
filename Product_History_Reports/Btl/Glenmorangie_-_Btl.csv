@@ -1,4 +1,4 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-12-04 21:26:55,115.0,2021-12-04,True
-2023-06-04 18:46:01,120.0,2023-06-04,True
-2024-01-21 21:15:37,125.0,2024-01-21,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Glenmorangie - Btl,115.0,0,2021-08-19,2023-06-03,Btl
+Glenmorangie - Btl,120.0,0,2023-06-04,2024-01-20,Btl
+Glenmorangie - Btl,125.0,0,2024-01-21,2099-12-31,Btl

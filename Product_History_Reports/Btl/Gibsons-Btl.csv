@@ -1,2 +1,2 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-10-01 20:50:17,60.0,2021-10-01,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Gibsons-Btl,60.0,0,2021-08-19,2099-12-31,Btl

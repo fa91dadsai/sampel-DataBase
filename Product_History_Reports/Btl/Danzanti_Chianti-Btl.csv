@@ -1,4 +1,4 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-09-14 20:02:24,37.0,2021-09-14,True
-2022-10-12 21:29:37,40.0,2022-10-12,True
-2023-07-02 21:23:35,45.0,2023-07-02,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Danzanti Chianti-Btl,37.0,0,2021-08-19,2022-10-11,Btl
+Danzanti Chianti-Btl,40.0,0,2022-10-12,2023-07-01,Btl
+Danzanti Chianti-Btl,45.0,0,2023-07-02,2099-12-31,Btl

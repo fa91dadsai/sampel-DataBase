@@ -1,4 +1,4 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-09-30 21:06:54,70.0,2021-09-30,True
-2024-06-30 17:27:17,32.0,2024-06-30,True
-2024-07-06 17:17:30,70.0,2024-07-06,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Mistral Pink Btl,70.0,0,2021-08-19,2024-06-29,Btl
+Mistral Pink Btl,32.0,0,2024-06-30,2024-07-05,Btl
+Mistral Pink Btl,70.0,0,2024-07-06,2099-12-31,Btl

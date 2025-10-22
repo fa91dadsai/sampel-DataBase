@@ -1,4 +1,4 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-12-04 18:12:34,55.0,2021-12-04,True
-2023-11-30 22:28:21,60.0,2023-11-30,True
-2024-12-30 18:18:37,59.0,2024-12-30,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Susana Balbo Sig Rose- Btl,55.0,0,2021-08-19,2023-11-29,Btl
+Susana Balbo Sig Rose- Btl,60.0,0,2023-11-30,2024-12-29,Btl
+Susana Balbo Sig Rose- Btl,59.0,0,2024-12-30,2099-12-31,Btl

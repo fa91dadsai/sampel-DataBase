@@ -1,0 +1,4 @@
+Item,Price,cost,ValidFrom,ValidTo,Type
+Moet&Chandon-Btl,95.0,0,2021-08-19,2022-11-01,Btl
+Moet&Chandon-Btl,110.0,0,2022-11-02,2023-06-20,Btl
+Moet&Chandon-Btl,120.0,0,2023-06-21,2099-12-31,Btl

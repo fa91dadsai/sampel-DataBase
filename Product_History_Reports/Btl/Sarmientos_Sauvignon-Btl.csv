@@ -1,2 +1,2 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-11-27 20:41:17,30.0,2021-11-27,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Sarmientos Sauvignon-Btl,30.0,0,2021-08-19,2099-12-31,Btl

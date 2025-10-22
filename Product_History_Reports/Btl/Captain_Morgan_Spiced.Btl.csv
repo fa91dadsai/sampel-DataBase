@@ -1,3 +1,3 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-10-01 19:54:56,70.0,2021-10-01,True
-2024-01-15 16:29:10,80.0,2024-01-15,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Captain Morgan Spiced.Btl,70.0,0,2021-08-19,2024-01-14,Btl
+Captain Morgan Spiced.Btl,80.0,0,2024-01-15,2099-12-31,Btl

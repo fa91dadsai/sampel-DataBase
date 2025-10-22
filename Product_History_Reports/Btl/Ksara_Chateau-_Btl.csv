@@ -1,2 +1,2 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-09-10 18:13:58,35.0,2021-09-10,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Ksara Chateau- Btl,35.0,0,2021-08-19,2099-12-31,Btl

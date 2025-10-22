@@ -1,0 +1,4 @@
+Item,Price,cost,ValidFrom,ValidTo,Type
+Haymans Btl,70.0,0,2021-08-19,2022-12-08,Btl
+Haymans Btl,55.0,0,2022-12-09,2023-06-05,Btl
+Haymans Btl,65.0,0,2023-06-06,2099-12-31,Btl

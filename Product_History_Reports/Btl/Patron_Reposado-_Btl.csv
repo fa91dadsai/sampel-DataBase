@@ -1,4 +1,4 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-10-24 20:32:00,95.0,2021-10-24,True
-2023-08-23 15:59:30,120.0,2023-08-23,True
-2024-01-11 18:13:09,135.0,2024-01-11,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Patron Reposado- Btl,95.0,0,2021-08-19,2023-08-22,Btl
+Patron Reposado- Btl,120.0,0,2023-08-23,2024-01-10,Btl
+Patron Reposado- Btl,135.0,0,2024-01-11,2099-12-31,Btl

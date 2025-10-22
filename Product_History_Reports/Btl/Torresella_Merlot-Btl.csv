@@ -1,4 +1,4 @@
-Date,Price,Sale_Date,Change_in_Price
-12/1/2021 18:32,30,12/1/2021,TRUE
-6/2/2023 20:53,35,6/2/2023,TRUE
-1/13/2024 20:40,36,1/13/2024,TRUE
+Item,Price,cost,ValidFrom,ValidTo,Type
+Torresella Merlot-Btl,30.0,0,2021-08-19,2023-06-01,Btl
+Torresella Merlot-Btl,35.0,0,2023-06-02,2024-01-12,Btl
+Torresella Merlot-Btl,36.0,0,2024-01-13,2099-12-31,Btl

@@ -1,0 +1,8 @@
+Item,Price,cost,ValidFrom,ValidTo,Type
+Peroni Btl.,6.0,0,2021-08-19,2025-04-27,Btl
+Peroni Btl.,1.9,0,2025-04-28,2025-04-27,Btl
+Peroni Btl.,6.0,0,2025-04-28,2025-05-07,Btl
+Peroni Btl.,1.9074,0,2025-05-08,2025-05-09,Btl
+Peroni Btl.,6.0,0,2025-05-10,2025-05-30,Btl
+Peroni Btl.,1.97,0,2025-05-31,2025-05-31,Btl
+Peroni Btl.,6.0,0,2025-06-01,2099-12-31,Btl

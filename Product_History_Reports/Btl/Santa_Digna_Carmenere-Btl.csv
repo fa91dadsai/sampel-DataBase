@@ -1,6 +1,6 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-09-14 21:06:37,38.0,2021-09-14,True
-2022-09-18 20:57:13,40.0,2022-09-18,True
-2024-01-17 20:08:28,50.0,2024-01-17,True
-2024-09-29 16:12:40,15.857,2024-09-29,True
-2024-10-08 18:51:46,50.0,2024-10-08,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Santa Digna Carmenere-Btl,38.0,0,2021-08-19,2022-09-17,Btl
+Santa Digna Carmenere-Btl,40.0,0,2022-09-18,2024-01-16,Btl
+Santa Digna Carmenere-Btl,50.0,0,2024-01-17,2024-09-28,Btl
+Santa Digna Carmenere-Btl,15.857,0,2024-09-29,2024-10-07,Btl
+Santa Digna Carmenere-Btl,50.0,0,2024-10-08,2099-12-31,Btl

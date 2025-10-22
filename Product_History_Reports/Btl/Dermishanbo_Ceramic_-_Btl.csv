@@ -1,2 +1,2 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-11-13 20:55:56,70.0,2021-11-13,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Dermishanbo Ceramic - Btl,70.0,0,2021-08-19,2099-12-31,Btl

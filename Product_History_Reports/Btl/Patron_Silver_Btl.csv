@@ -1,4 +1,4 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-09-22 00:42:36,90.0,2021-09-22,True
-2023-06-03 20:47:27,110.0,2023-06-03,True
-2024-01-10 20:42:58,120.0,2024-01-10,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Patron Silver Btl,90.0,0,2021-08-19,2023-06-02,Btl
+Patron Silver Btl,110.0,0,2023-06-03,2024-01-09,Btl
+Patron Silver Btl,120.0,0,2024-01-10,2099-12-31,Btl

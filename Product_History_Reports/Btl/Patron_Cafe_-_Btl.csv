@@ -1,2 +1,2 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-09-17 01:27:49,75.0,2021-09-17,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Patron Cafe - Btl,75.0,0,2021-08-19,2099-12-31,Btl

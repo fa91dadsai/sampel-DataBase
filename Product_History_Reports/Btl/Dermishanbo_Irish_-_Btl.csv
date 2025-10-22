@@ -1,5 +1,5 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-10-15 20:35:19,70.0,2021-10-15,True
-2022-10-17 21:09:01,80.0,2022-10-17,True
-2023-12-15 22:30:36,90.0,2023-12-15,True
-2024-04-11 23:06:12,100.0,2024-04-11,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Dermishanbo Irish - Btl,70.0,0,2021-08-19,2022-10-16,Btl
+Dermishanbo Irish - Btl,80.0,0,2022-10-17,2023-12-14,Btl
+Dermishanbo Irish - Btl,90.0,0,2023-12-15,2024-04-10,Btl
+Dermishanbo Irish - Btl,100.0,0,2024-04-11,2099-12-31,Btl

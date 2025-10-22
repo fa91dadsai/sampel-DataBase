@@ -1,4 +1,4 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-09-08 17:54:47,75.0,2021-09-08,True
-2022-10-13 21:31:36,80.0,2022-10-13,True
-2023-06-14 20:08:27,90.0,2023-06-14,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Sipsmith  Btl,75.0,0,2021-08-19,2022-10-12,Btl
+Sipsmith  Btl,80.0,0,2022-10-13,2023-06-13,Btl
+Sipsmith  Btl,90.0,0,2023-06-14,2099-12-31,Btl

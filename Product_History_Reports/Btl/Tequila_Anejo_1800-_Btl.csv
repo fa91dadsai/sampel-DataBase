@@ -1,0 +1,5 @@
+Item,Price,cost,ValidFrom,ValidTo,Type
+Tequila Anejo 1800- Btl,100.0,0,2021-08-19,2023-11-12,Btl
+Tequila Anejo 1800- Btl,110.0,0,2023-11-13,2025-05-30,Btl
+Tequila Anejo 1800- Btl,30.55,0,2025-05-31,2025-06-02,Btl
+Tequila Anejo 1800- Btl,110.0,0,2025-06-03,2099-12-31,Btl

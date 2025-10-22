@@ -1,2 +1,2 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-09-03 20:31:09,65.0,2021-09-03,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Laroche Petit Chablis-Btl,65.0,0,2021-08-19,2099-12-31,Btl

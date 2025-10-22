@@ -1,4 +1,4 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-09-17 16:33:47,35.0,2021-09-17,True
-2022-12-11 22:32:58,40.0,2022-12-11,True
-2023-06-20 22:35:04,45.0,2023-06-20,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Ksara Carignan-Btl,35.0,0,2021-08-19,2022-12-10,Btl
+Ksara Carignan-Btl,40.0,0,2022-12-11,2023-06-19,Btl
+Ksara Carignan-Btl,45.0,0,2023-06-20,2099-12-31,Btl

@@ -1,4 +1,4 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-08-26 21:22:40,130.0,2021-08-26,True
-2023-06-04 19:09:07,150.0,2023-06-04,True
-2024-01-09 19:40:52,165.0,2024-01-09,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Glenfiddich 15 Btl,130.0,0,2021-08-19,2023-06-03,Btl
+Glenfiddich 15 Btl,150.0,0,2023-06-04,2024-01-08,Btl
+Glenfiddich 15 Btl,165.0,0,2024-01-09,2099-12-31,Btl

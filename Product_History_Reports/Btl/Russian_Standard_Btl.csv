@@ -1,11 +1,11 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-08-25 17:34:47,50.0,2021-08-25,True
-2022-09-18 19:52:01,55.0,2022-09-18,True
-2024-02-06 16:45:35,13.666,2024-02-06,True
-2024-02-06 17:10:05,55.0,2024-02-06,True
-2025-02-13 18:28:02,14.47,2025-02-13,True
-2025-02-14 16:07:37,55.0,2025-02-14,True
-2025-05-08 17:57:35,14.74074,2025-05-08,True
-2025-05-08 18:49:52,55.0,2025-05-08,True
-2025-05-31 20:25:38,14.66,2025-05-31,True
-2025-05-31 20:40:10,55.0,2025-05-31,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Russian Standard Btl,50.0,0,2021-08-19,2022-09-17,Btl
+Russian Standard Btl,55.0,0,2022-09-18,2024-02-05,Btl
+Russian Standard Btl,13.666,0,2024-02-06,2024-02-05,Btl
+Russian Standard Btl,55.0,0,2024-02-06,2025-02-12,Btl
+Russian Standard Btl,14.47,0,2025-02-13,2025-02-13,Btl
+Russian Standard Btl,55.0,0,2025-02-14,2025-05-07,Btl
+Russian Standard Btl,14.74074,0,2025-05-08,2025-05-07,Btl
+Russian Standard Btl,55.0,0,2025-05-08,2025-05-30,Btl
+Russian Standard Btl,14.66,0,2025-05-31,2025-05-30,Btl
+Russian Standard Btl,55.0,0,2025-05-31,2099-12-31,Btl

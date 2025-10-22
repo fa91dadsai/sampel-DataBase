@@ -1,2 +1,2 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-08-22 19:37:38,25.0,2021-08-22,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Tavernello Pinot Grigio-Btl,25.0,0,2021-08-19,2099-12-31,Btl

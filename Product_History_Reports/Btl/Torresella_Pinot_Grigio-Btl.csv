@@ -1,2 +1,2 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-12-07 19:53:23,30.0,2021-12-07,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Torresella Pinot Grigio-Btl,30.0,0,2021-08-19,2099-12-31,Btl

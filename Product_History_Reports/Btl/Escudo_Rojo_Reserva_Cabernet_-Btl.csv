@@ -1,4 +1,4 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-09-27 21:38:11,50.0,2021-09-27,True
-2022-10-08 19:54:49,55.0,2022-10-08,True
-2023-07-25 21:49:37,60.0,2023-07-25,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Escudo Rojo Reserva Cabernet -Btl,50.0,0,2021-08-19,2022-10-07,Btl
+Escudo Rojo Reserva Cabernet -Btl,55.0,0,2022-10-08,2023-07-24,Btl
+Escudo Rojo Reserva Cabernet -Btl,60.0,0,2023-07-25,2099-12-31,Btl

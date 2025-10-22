@@ -1,2 +1,2 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-09-10 20:23:51,22.0,2021-09-10,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Jr Classic Chardonay-Btl,22.0,0,2021-08-19,2099-12-31,Btl

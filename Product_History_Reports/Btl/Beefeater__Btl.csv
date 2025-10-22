@@ -1,0 +1,8 @@
+Item,Price,cost,ValidFrom,ValidTo,Type
+Beefeater / Btl,60.0,0,2021-08-19,2023-10-18,Btl
+Beefeater / Btl,22.559,0,2023-10-19,2023-10-20,Btl
+Beefeater / Btl,60.0,0,2023-10-21,2023-12-28,Btl
+Beefeater / Btl,55.0,0,2023-12-29,2024-03-05,Btl
+Beefeater / Btl,60.0,0,2024-03-06,2025-05-07,Btl
+Beefeater / Btl,21.1111,0,2025-05-08,2025-05-31,Btl
+Beefeater / Btl,60.0,0,2025-06-01,2099-12-31,Btl

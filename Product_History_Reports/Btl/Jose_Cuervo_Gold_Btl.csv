@@ -1,5 +1,5 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-09-16 22:03:21,55.0,2021-09-16,True
-2022-10-10 20:38:28,60.0,2022-10-10,True
-2023-06-07 21:27:11,65.0,2023-06-07,True
-2024-01-25 19:23:44,70.0,2024-01-25,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Jose Cuervo Gold Btl,55.0,0,2021-08-19,2022-10-09,Btl
+Jose Cuervo Gold Btl,60.0,0,2022-10-10,2023-06-06,Btl
+Jose Cuervo Gold Btl,65.0,0,2023-06-07,2024-01-24,Btl
+Jose Cuervo Gold Btl,70.0,0,2024-01-25,2099-12-31,Btl

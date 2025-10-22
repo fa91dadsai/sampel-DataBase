@@ -1,2 +1,2 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-11-16 20:19:57,60.0,2021-11-16,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Gordons Btl,60.0,0,2021-08-19,2099-12-31,Btl

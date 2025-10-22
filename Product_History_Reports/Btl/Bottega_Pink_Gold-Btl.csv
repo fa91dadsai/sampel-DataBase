@@ -1,2 +1,2 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-09-18 21:05:12,55.0,2021-09-18,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Bottega Pink Gold-Btl,55.0,0,2021-08-19,2099-12-31,Btl

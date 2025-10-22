@@ -1,2 +1,2 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-09-02 20:57:18,65.0,2021-09-02,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Russian Platinium  70 Btl,65.0,0,2021-08-19,2099-12-31,Btl

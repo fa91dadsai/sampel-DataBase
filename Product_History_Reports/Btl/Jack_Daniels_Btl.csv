@@ -1,2 +1,2 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-10-15 20:26:24,65.0,2021-10-15,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Jack Daniels Btl,65.0,0,2021-08-19,2099-12-31,Btl

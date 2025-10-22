@@ -1,2 +1,2 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-09-03 18:07:44,75.0,2021-09-03,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Jameson Caskmates Ipa - Btl,75.0,0,2021-08-19,2099-12-31,Btl

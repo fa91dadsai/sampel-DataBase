@@ -1,4 +1,4 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-08-19 22:21:19,75.0,2021-08-19,True
-2023-03-31 21:36:56,85.0,2023-03-31,True
-2023-08-15 20:22:40,105.0,2023-08-15,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Buffalo Trace Btl,75.0,0,2021-08-19,2023-03-30,Btl
+Buffalo Trace Btl,85.0,0,2023-03-31,2023-08-14,Btl
+Buffalo Trace Btl,105.0,0,2023-08-15,2099-12-31,Btl

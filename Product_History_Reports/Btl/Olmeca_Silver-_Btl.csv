@@ -1,6 +1,6 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-10-21 21:18:50,45.0,2021-10-21,True
-2022-09-20 15:17:18,55.0,2022-09-20,True
-2023-06-05 22:24:21,60.0,2023-06-05,True
-2023-12-28 16:09:02,55.0,2023-12-28,True
-2024-03-01 19:15:11,65.0,2024-03-01,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Olmeca Silver- Btl,45.0,0,2021-08-19,2022-09-19,Btl
+Olmeca Silver- Btl,55.0,0,2022-09-20,2023-06-04,Btl
+Olmeca Silver- Btl,60.0,0,2023-06-05,2023-12-27,Btl
+Olmeca Silver- Btl,55.0,0,2023-12-28,2024-02-29,Btl
+Olmeca Silver- Btl,65.0,0,2024-03-01,2099-12-31,Btl

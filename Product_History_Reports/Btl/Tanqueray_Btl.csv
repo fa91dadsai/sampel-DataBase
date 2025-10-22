@@ -1,4 +1,4 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-08-19 20:03:22,60.0,2021-08-19,True
-2022-10-29 20:50:05,65.0,2022-10-29,True
-2023-06-01 21:16:26,70.0,2023-06-01,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Tanqueray Btl,60.0,0,2021-08-19,2022-10-28,Btl
+Tanqueray Btl,65.0,0,2022-10-29,2023-05-31,Btl
+Tanqueray Btl,70.0,0,2023-06-01,2099-12-31,Btl

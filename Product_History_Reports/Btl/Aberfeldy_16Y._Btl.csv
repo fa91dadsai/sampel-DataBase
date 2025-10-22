@@ -1,4 +1,4 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-09-06 22:41:46,110.0,2021-09-06,True
-2022-09-21 20:08:17,120.0,2022-09-21,True
-2023-06-16 19:26:26,140.0,2023-06-16,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Aberfeldy 16Y. Btl,110.0,0,2021-08-19,2022-09-20,Btl
+Aberfeldy 16Y. Btl,120.0,0,2022-09-21,2023-06-15,Btl
+Aberfeldy 16Y. Btl,140.0,0,2023-06-16,2099-12-31,Btl

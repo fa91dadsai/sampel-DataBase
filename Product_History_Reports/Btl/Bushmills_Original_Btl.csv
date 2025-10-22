@@ -1,2 +1,2 @@
-Date,Price,Sale_Date,Change_in_Price
-2021-10-01 21:40:58,70.0,2021-10-01,True
+Item,Price,cost,ValidFrom,ValidTo,Type
+Bushmills Original Btl,70.0,0,2021-08-19,2099-12-31,Btl
