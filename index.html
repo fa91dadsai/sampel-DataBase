@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chianti Master Guide | Pairing Edition</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <!-- PDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <style>
+        /* ---------- THEME TOKENS ---------- */
+        :root {
+            --bg-body: radial-gradient(circle at 20% 20%, rgba(255, 107, 107, 0.12), transparent 28%),
+                       radial-gradient(circle at 80% 10%, rgba(212, 175, 55, 0.12), transparent 35%),
+                       #111;
+            --bg-paper: #1c1a1a;
+            --bg-card: rgba(255, 255, 255, 0.05);
+            --bg-card-strong: rgba(255, 255, 255, 0.07);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f2ede9;
+            --text-muted: #9e968d;
+            --accent-std: #ff6b6b;
+            --accent-prm: #c44545;
+            --accent-gold: #d4af37;
+            --shadow: 0 24px 60px rgba(0,0,0,0.45);
+        }
+
+        [data-theme="light"] {
+            --bg-body: radial-gradient(circle at 20% 20%, rgba(224, 74, 74, 0.08), transparent 28%),
+                       radial-gradient(circle at 80% 10%, rgba(212, 175, 55, 0.12), transparent 35%),
+                       #f5f1eb;
+            --bg-paper: #fffaf4;
+            --bg-card: rgba(0, 0, 0, 0.02);
+            --bg-card-strong: rgba(0, 0, 0, 0.04);
+            --glass-border: rgba(0, 0, 0, 0.08);
+            --text-main: #2b2623;
+            --text-muted: #6f6860;
+            --accent-std: #e04a4a;
+            --accent-prm: #962d2d;
+            --accent-gold: #b48d1d;
+            --shadow: 0 20px 50px rgba(0,0,0,0.12);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; -webkit-print-color-adjust: exact; transition: background 0.35s ease, color 0.35s ease, border-color 0.35s ease, transform 0.25s ease; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-body);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 38px 16px 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 28px;
+        }
+
+        /* ---------- CONTROLS ---------- */
+        .controls-container {
+            position: sticky;
+            top: 12px;
+            z-index: 10;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            background: rgba(0,0,0,0.15);
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow);
+        }
+
+        .btn {
+            border: 1px solid var(--glass-border);
+            padding: 11px 18px;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            letter-spacing: 0.01em;
+            background: var(--bg-card);
+            color: var(--text-main);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+        }
+        .btn:hover { transform: translateY(-1px) scale(1.01); }
+        .btn:active { transform: translateY(0); }
+
+        .btn-download { background: linear-gradient(135deg, var(--accent-prm), var(--accent-std)); color: #fff; border: none; }
+        .btn-theme { background: var(--bg-card-strong); }
+
+        /* ---------- PAPER ---------- */
+        #pdf-content {
+            width: min(1100px, 90vw);
+            background: var(--bg-paper);
+            border-radius: 18px;
+            padding: 24px 26px 26px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--glass-border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decorative glow */
+        #pdf-content::before, #pdf-content::after {
+            content: '';
+            position: absolute;
+            width: 340px; height: 340px;
+            background: radial-gradient(circle, rgba(255,107,107,0.12), transparent 60%);
+            filter: blur(20px);
+            z-index: 0;
+        }
+        #pdf-content::before { top: -140px; right: -80px; }
+        #pdf-content::after { bottom: -140px; left: -60px; background: radial-gradient(circle, rgba(212,175,55,0.12), transparent 60%); }
+
+        .content { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 18px; }
+
+        /* ---------- HEADER ---------- */
+        header { text-align: center; padding: 10px 0 4px; position: relative; }
+        header .tagline { letter-spacing: 0.3em; text-transform: uppercase; font-size: 0.7rem; color: var(--text-muted); }
+        header h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 2.9rem); margin: 8px 0; }
+        header h1 span { color: var(--accent-prm); font-style: italic; }
+        header .pill { display: inline-flex; gap: 8px; align-items: center; background: var(--bg-card-strong); border: 1px solid var(--glass-border); color: var(--text-muted); border-radius: 999px; padding: 8px 14px; font-size: 0.8rem; }
+
+        /* ---------- SECTION ---------- */
+        .section-header { display: flex; align-items: center; gap: 10px; margin-top: 6px; }
+        .section-header h2 { font-family: 'Playfair Display', serif; font-size: 1.1rem; letter-spacing: 0.02em; }
+        .line { flex: 1; height: 1px; background: var(--glass-border); }
+
+        /* ---------- GRID & CARDS ---------- */
+        .comparison-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 14px;
+            padding: 14px 14px 12px;
+            border: 1px solid var(--glass-border);
+            position: relative;
+            overflow: hidden;
+        }
+        .card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(145deg, rgba(255,255,255,0.04), transparent 55%); pointer-events: none; }
+        .card strong { color: var(--text-main); }
+
+        .card-std { border-top: 3px solid var(--accent-std); box-shadow: 0 14px 35px rgba(255,107,107,0.08); }
+        .card-prm { border-top: 3px solid var(--accent-prm); box-shadow: 0 14px 35px rgba(196,69,69,0.12); }
+
+        .card-title { display: flex; align-items: center; justify-content: space-between; font-weight: 800; font-size: 1rem; margin-bottom: 10px; }
+        .badge { padding: 4px 8px; border-radius: 8px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.02em; }
+        .badge-std { background: rgba(255,107,107,0.16); color: var(--accent-std); }
+        .badge-prm { background: rgba(196,69,69,0.16); color: var(--accent-prm); }
+
+        /* ---------- DATA ROWS ---------- */
+        .id-row { display: grid; grid-template-columns: 1fr auto; gap: 10px; padding: 6px 0; border-bottom: 1px dashed var(--glass-border); font-size: 0.9rem; }
+        .id-row:last-child { border-bottom: none; }
+        .id-label { color: var(--text-muted); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.1em; }
+        .id-val { font-weight: 700; }
+
+        /* ---------- BARS ---------- */
+        .bar-group { margin-bottom: 8px; }
+        .bar-label { display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--text-muted); margin-bottom: 4px; }
+        .progress-track { height: 8px; background: var(--glass-border); border-radius: 999px; overflow: hidden; }
+        .progress-fill { height: 100%; border-radius: 999px; }
+        .fill-std { background: linear-gradient(90deg, rgba(255,107,107,0.8), rgba(255,107,107,0.5)); }
+        .fill-prm { background: linear-gradient(90deg, rgba(196,69,69,0.9), rgba(196,69,69,0.6)); }
+
+        /* ---------- NOTES ---------- */
+        .notes-list { list-style: none; display: grid; gap: 8px; }
+        .notes-list li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: center; font-size: 0.9rem; color: var(--text-main); }
+        .notes-list .icon { font-size: 1.1rem; }
+        .notes-list strong { color: var(--text-muted); font-size: 0.7rem; letter-spacing: 0.08em; }
+
+        /* ---------- TIP GRID ---------- */
+        .tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+        .tip-box { background: var(--bg-card-strong); border: 1px dashed var(--glass-border); border-radius: 12px; padding: 12px; box-shadow: 0 12px 32px rgba(0,0,0,0.14); }
+        .tip-header { color: var(--accent-gold); font-size: 0.75rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+        .tip-text { font-size: 0.88rem; color: var(--text-muted); line-height: 1.45; }
+        .tip-text strong { color: var(--text-main); }
+
+        /* ---------- FOOTER ---------- */
+        footer { text-align: center; color: var(--text-muted); font-size: 0.8rem; padding: 12px 0 4px; border-top: 1px solid var(--glass-border); margin-top: 8px; }
+
+        /* ---------- RESPONSIVE PDF ---------- */
+        @media print { body { background: var(--bg-paper); padding: 0; } .controls-container { display: none; } #pdf-content { width: 210mm; min-height: 297mm; padding: 12mm 14mm; box-shadow: none; border-radius: 0; } }
+    </style>
+</head>
+<body>
+    <div class="controls-container">
+        <button class="btn btn-theme" onclick="toggleTheme()">
+            <span id="theme-icon">☀️</span> Theme
+        </button>
+        <button class="btn btn-download" onclick="downloadPDF()">
+            <span>📄</span> Export PDF
+        </button>
+    </div>
+
+    <main id="pdf-content">
+        <div class="content">
+            <header>
+                <div class="tagline">Sommelier Training • Pairing Edition</div>
+                <h1>Chianti <span>Vs.</span> Classico</h1>
+                <div class="pill">Precision pairing guide • Designed for print & screens</div>
+            </header>
+
+            <!-- Identity -->
+            <div class="section-header">
+                <h2>01. Identity & Origin</h2>
+                <div class="line"></div>
+            </div>
+            <div class="comparison-grid">
+                <div class="card card-std">
+                    <div class="card-title" style="color:var(--accent-std)">Chianti DOCG <span class="badge badge-std">Standard</span></div>
+                    <div class="id-row"><div class="id-label">Region</div><div class="id-val">Broader Tuscany</div></div>
+                    <div class="id-row"><div class="id-label">Grapes</div><div class="id-val">Minimum 70% Sangiovese</div></div>
+                    <div class="id-row"><div class="id-label">White Grapes</div><div class="id-val">Allowed (Max 10%)</div></div>
+                    <div class="id-row"><div class="id-label">Style</div><div class="id-val">Fresh & Simple</div></div>
+                </div>
+                <div class="card card-prm">
+                    <div class="card-title" style="color:var(--accent-prm)">Chianti Classico <span class="badge badge-prm">Premium</span></div>
+                    <div class="id-row"><div class="id-label">Region</div><div class="id-val">Historic Zone</div></div>
+                    <div class="id-row"><div class="id-label">Grapes</div><div class="id-val">Minimum 80% Sangiovese</div></div>
+                    <div class="id-row"><div class="id-label">White Grapes</div><div class="id-val" style="color:var(--accent-gold)">Banned (100% Red)</div></div>
+                    <div class="id-row"><div class="id-label">Style</div><div class="id-val">Complex & Structured</div></div>
+                </div>
+            </div>
+
+            <!-- Structure -->
+            <div class="section-header">
+                <h2>02. Structure Analysis</h2>
+                <div class="line"></div>
+            </div>
+            <div class="comparison-grid">
+                <div class="card card-std">
+                    <div class="bar-group"><div class="bar-label"><span>Body</span><span>Light-Med</span></div><div class="progress-track"><div class="progress-fill fill-std" style="width:45%"></div></div></div>
+                    <div class="bar-group"><div class="bar-label"><span>Acidity</span><span>Very High</span></div><div class="progress-track"><div class="progress-fill fill-std" style="width:90%"></div></div></div>
+                    <div class="bar-group"><div class="bar-label"><span>Tannins</span><span>Moderate</span></div><div class="progress-track"><div class="progress-fill fill-std" style="width:50%"></div></div></div>
+                    <div class="bar-group"><div class="bar-label"><span>Alcohol</span><span>Medium (~12.5%)</span></div><div class="progress-track"><div class="progress-fill fill-std" style="width:60%"></div></div></div>
+                    <div class="bar-group"><div class="bar-label"><span>Sweetness</span><span>Bone Dry</span></div><div class="progress-track"><div class="progress-fill fill-std" style="width:5%"></div></div></div>
+                </div>
+                <div class="card card-prm">
+                    <div class="bar-group"><div class="bar-label"><span>Body</span><span>Med-Full</span></div><div class="progress-track"><div class="progress-fill fill-prm" style="width:75%"></div></div></div>
+                    <div class="bar-group"><div class="bar-label"><span>Acidity</span><span>High (Balanced)</span></div><div class="progress-track"><div class="progress-fill fill-prm" style="width:85%"></div></div></div>
+                    <div class="bar-group"><div class="bar-label"><span>Tannins</span><span>Firm/Grippy</span></div><div class="progress-track"><div class="progress-fill fill-prm" style="width:90%"></div></div></div>
+                    <div class="bar-group"><div class="bar-label"><span>Alcohol</span><span>Med-High (13.5%+)</span></div><div class="progress-track"><div class="progress-fill fill-prm" style="width:80%"></div></div></div>
+                    <div class="bar-group"><div class="bar-label"><span>Sweetness</span><span>Bone Dry</span></div><div class="progress-track"><div class="progress-fill fill-prm" style="width:5%"></div></div></div>
+                </div>
+            </div>
+
+            <!-- Taste & Pairing -->
+            <div class="section-header">
+                <h2>03. Taste & Perfect Pairings</h2>
+                <div class="line"></div>
+            </div>
+            <div class="comparison-grid">
+                <div class="card card-std">
+                    <div class="card-title" style="color:var(--accent-std)">Standard Profile <span class="badge badge-std">Vibrant</span></div>
+                    <ul class="notes-list">
+                        <li><span class="icon">🍒</span> Sour Cherry / Red Berry</li>
+                        <li><span class="icon">🌸</span> Violet / Fresh Herbs</li>
+                    </ul>
+                    <div class="line" style="margin:12px 0;"></div>
+                    <div class="card-title" style="color:var(--accent-std); font-size:0.9rem;">Menu Recommendations</div>
+                    <ul class="notes-list">
+                        <li><span class="icon">🍝</span> <div><strong>Sauce</strong><br> Marinara, Pomodoro, Arrabbiata, Pesto</div></li>
+                        <li><span class="icon">🧀</span> <div><strong>Cheese</strong><br> Fresh Mozzarella, Burrata, Young Pecorino</div></li>
+                        <li><span class="icon">🍕</span> <div><strong>Dish</strong><br> Pizza, Charcuterie Board, Bruschetta</div></li>
+                    </ul>
+                </div>
+                <div class="card card-prm">
+                    <div class="card-title" style="color:var(--accent-prm)">Classico Profile <span class="badge badge-prm">Layered</span></div>
+                    <ul class="notes-list">
+                        <li><span class="icon">🫐</span> Black Cherry / Dried Fig</li>
+                        <li><span class="icon">☕</span> Espresso / Leather / Earth</li>
+                    </ul>
+                    <div class="line" style="margin:12px 0;"></div>
+                    <div class="card-title" style="color:var(--accent-prm); font-size:0.9rem;">Menu Recommendations</div>
+                    <ul class="notes-list">
+                        <li><span class="icon">🍲</span> <div><strong>Sauce</strong><br> Bolognese, Wild Boar Ragu, Truffle/Mushroom</div></li>
+                        <li><span class="icon">🧀</span> <div><strong>Cheese</strong><br> Aged Parmigiano (24mo+), Pecorino Toscano</div></li>
+                        <li><span class="icon">🥩</span> <div><strong>Dish</strong><br> Ribeye Steak, T-Bone, Braised Lamb</div></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sommelier Secrets -->
+            <div class="section-header">
+                <h2>04. Sommelier Secrets</h2>
+                <div class="line"></div>
+            </div>
+            <div class="tips-grid">
+                <div class="tip-box">
+                    <div class="tip-header">💡 The Upsell Strategy</div>
+                    <div class="tip-text">
+                        If they order <strong>Pasta with Red Sauce</strong>, sell Standard Chianti (high acid loves tomato).<br>
+                        If they order <strong>Steak or Truffles</strong>, sell Classico (tannins crave protein).
+                    </div>
+                </div>
+                <div class="tip-box">
+                    <div class="tip-header">🌡️ Temperature</div>
+                    <div class="tip-text">
+                        <strong>Standard:</strong> 14–16°C (light chill).<br>
+                        <strong>Classico:</strong> 16–18°C (cellar cool).<br>
+                        <em>Never serve warm:</em> heat emphasizes alcohol over fruit.
+                    </div>
+                </div>
+                <div class="tip-box">
+                    <div class="tip-header">🍷 Glass & Service</div>
+                    <div class="tip-text">
+                        <strong>Decanting:</strong> Standard (No). Classico Riserva (Yes, 30 mins).<br>
+                        <strong>Glassware:</strong> Use a broad bowl (Bordeaux) for Classico to open the earthy notes.
+                    </div>
+                </div>
+            </div>
+
+            <footer>Staff Training Module • Wine Education Series • Generated by AI</footer>
+        </div>
+    </main>
+
+    <script>
+        const THEME_KEY = 'chianti-theme';
+
+        function applyTheme(theme) {
+            const html = document.documentElement;
+            const icon = document.getElementById('theme-icon');
+            html.setAttribute('data-theme', theme);
+            icon.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            localStorage.setItem(THEME_KEY, next);
+            applyTheme(next);
+        }
+
+        function initTheme() {
+            const stored = localStorage.getItem(THEME_KEY);
+            if (stored === 'light' || stored === 'dark') {
+                applyTheme(stored);
+            }
+        }
+
+        function downloadPDF() {
+            const element = document.getElementById('pdf-content');
+            const styles = getComputedStyle(document.documentElement);
+            const bgPaper = styles.getPropertyValue('--bg-paper').trim();
+
+            const opt = {
+                margin: 0,
+                filename: 'Chianti_Pairing_Guide.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true, backgroundColor: bgPaper },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            html2pdf().set(opt).from(element).save();
+        }
+
+        initTheme();
+    </script>
+</body>
+</html>
